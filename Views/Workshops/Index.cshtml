@@ -1,0 +1,26 @@
+@model Lab3.Models.Rsvp
+
+@{
+    ViewData["Title"] = "Workshop RSVP";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+    
+    <p class="lead mt-4">
+        Join us for an exciting workshop! Fill out the RSVP form below to secure your spot.
+    </p>
+    
+    <div class="alert alert-info" role="alert">
+        <strong>What to expect:</strong> Learn from industry experts, network with peers, and gain hands-on experience.
+    </div>
+    
+    <div class="mt-4">
+        <a href="@Url.Action("Create", "Rsvp")" class="btn btn-primary btn-lg">
+            Create RSVP
+        </a>
+        <a href="@Url.Action("List", "Rsvp")" class="btn btn-secondary btn-lg ms-2">
+            View RSVPs
+        </a>
+    </div>
+</div>
