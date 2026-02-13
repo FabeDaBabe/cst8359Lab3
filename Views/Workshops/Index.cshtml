@@ -8,18 +8,18 @@
     <h1>@ViewData["Title"]</h1>
     
     <p class="lead mt-4">
-        Join us for an exciting workshop! Fill out the RSVP form below to secure your spot.
+        Create an RSVP for whichever workshop you wish to attend!
     </p>
     
     <div class="alert alert-info" role="alert">
-        <strong>What to expect:</strong> Learn from industry experts, network with peers, and gain hands-on experience.
+		<strong>How it works:</strong> Type in your full name,and the enter the name of the workshop you'd like to attend. If you need any special accommodations, check the box.
     </div>
     
     <div class="mt-4">
-        <a href="@Url.Action("Create", "Rsvp")" class="btn btn-primary btn-lg">
+        <a href="@Url.Action("RsvpForm", "Workshops")" class="btn btn-primary btn-lg">
             Create RSVP
         </a>
-        <a href="@Url.Action("List", "Rsvp")" class="btn btn-secondary btn-lg ms-2">
+        <a href="@Url.Action("Registrations", "Workshops")" class="btn btn-secondary btn-lg ms-2">
             View RSVPs
         </a>
     </div>

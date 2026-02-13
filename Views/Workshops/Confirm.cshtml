@@ -1,0 +1,30 @@
+@model Lab3.Models.Rsvp
+
+@{
+    ViewData["Title"] = "RSVP Confirmation";
+}
+
+<div class="container mt-5">
+    <h1>@ViewData["Title"]</h1>
+
+    @if (ViewData["Message"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @ViewData["Message"]
+        </div>
+    }
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Registration Details</h5>
+            <p><strong>Full Name:</strong> @Model.FullName</p>
+            <p><strong>Workshop Title:</strong> @Model.WorkshopTitle</p>
+            <p><strong>Needs Accommodation:</strong> @(Model.NeedsAccommodation ? "Yes" : "No")</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a href="@Url.Action("Index", "Workshops")" class="btn btn-primary">Back to Workshops</a>
+        <a href="@Url.Action("Registrations", "Workshops")" class="btn btn-info">View All Registrations</a>
+    </div>
+</div>
